@@ -1,10 +1,8 @@
-# GossipStack iOS SDK — Demo App
+# GossipStack iOS SDK
 
 The official iOS SDK for [GossipStack](https://gossipstack.com) — Drop-in social feature SDKs for web and mobile applications.
 
-GossipStack provides ready-to-use commenting ([Echo](https://gossipstack.com)) and social feed ([Chronicle](https://gossipstack.com)) SDKs, backed by a centralized dashboard for content moderation, engagement analytics, webhook integrations, and role-based team management.
-
-This repository contains a minimal SwiftUI demo app showcasing how to integrate the **GossipStack iOS SDK** into your project.
+GossipStack provides ready-to-use commenting [Echo](https://gossipstack.com/products/echo) SDK, backed by a centralized dashboard for content moderation, engagement analytics, webhook integrations, and role-based team management.
 
 ## Prerequisites
 
@@ -14,9 +12,11 @@ This repository contains a minimal SwiftUI demo app showcasing how to integrate 
 - CocoaPods (or Swift Package Manager)
 - A GossipStack account with an active **Echo** or **Chronicle** subscription
 
-> **Don't have an account yet?** Head over to [dashboard.gossipstack.com](https://dashboard.gossipstack.com), create your account, and subscribe to the **Echo** (commenting) or **Chronicle** (social feed) product. You'll receive your `appId` from the dashboard.
+> Don't have an account yet? Head over to dashboard.gossipstack.com, create your account,
+set up a project, and subscribe to Echo (commenting) or Chronicle (social feed).
+Your app-id and project-id will be available in the dashboard once your application is created.
 
-## Installation
+## ⚙️ Installation
 
 ### CocoaPods
 
@@ -37,12 +37,16 @@ pod install
 In Xcode, go to **File → Add Package Dependencies…** and enter the repository URL:
 
 ```
-https://github.com/nicklama/gossipstack-ios-sdk
+https://github.com/gossipstack/gossipstack-ios
 ```
 
 Select the latest version and add the `GossipStack` package to your target.
 
-## Quick Start — Echo (Commenting)
+## 📱 Demo
+
+ 👉 See the [GossipStack iOS Demo App](https://github.com/gossipstack/gossipstack-ios-demo) for a complete integration example.
+
+## 🚀 Quick Start — Echo (Commenting)
 
 The demo app uses `GSKEchoView`, the drop-in commenting component from the **Echo** product. Here's the integration in a single SwiftUI view:
 
@@ -70,23 +74,7 @@ struct ContentView: View {
 
 Replace `__YOUR_APP_ID__` and `__YOUR_PAGE_ID__` with the values from your [GossipStack dashboard](https://dashboard.gossipstack.com).
 
-The `canonicalURL` parameter ties this comment section to a specific page on your website, enabling cross-platform comment sync between your web and mobile apps. See the [Canonical URL documentation](https://docs.gossipstack.com/echo-installation-ios#canonical-url) for details.
-
-## Running the Demo
-
-2. Install dependencies:
-   ```bash
-   pod install
-   ```
-
-3. Open the workspace:
-   ```bash
-   open GossipStackDemo.xcworkspace
-   ```
-
-4. Enter your `appId` and `pageId` in `ContentView.swift`.
-
-5. Build and run on a simulator or device.
+The `canonicalURL` parameter ties this comment section to a specific page on your website, enabling cross-platform comment sync between your web and mobile apps. See the [Canonical URL documentation](https://docs.gossipstack.com/echo-installation-ios#canonical-url) for more details.
 
 ## Documentation
 
