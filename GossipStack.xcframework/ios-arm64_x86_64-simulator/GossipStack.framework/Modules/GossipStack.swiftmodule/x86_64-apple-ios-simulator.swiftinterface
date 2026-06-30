@@ -1,0 +1,374 @@
+// Copyright (c) 2026 Honmono Studio SAS. All rights reserved.
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios18.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name GossipStack
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import AVFoundation
+import Combine
+import CryptoKit
+import DeveloperToolsSupport
+import Foundation
+import ImageIO
+import PhotosUI
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _PhotosUI_SwiftUI
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+final public class GSKConfiguration {
+  final public let projectId: Swift.String
+  final public let ssoUser: Swift.String?
+  final public let ssoHash: Swift.String?
+  final public var logLevel: GossipStack.GSKLogLevel
+  public init(projectId: Swift.String, ssoUser: Swift.String?, ssoHash: Swift.String?)
+  @objc deinit
+}
+public struct GSKContentConfiguration {
+  public let isVideoAutoplayEnabled: Swift.Bool
+  public let isAudioMutedByDefault: Swift.Bool
+  public init(isVideoAutoplayEnabled: Swift.Bool = false, isAudioMutedByDefault: Swift.Bool = true)
+}
+public enum GSKError : Foundation.LocalizedError {
+  case alreadyInitialized
+  case notInitialized
+  case invalidConfiguration(reason: Swift.String)
+  public var errorDescription: Swift.String {
+    get
+  }
+}
+public enum GSKLogLevel : Swift.Int, Swift.Comparable, Swift.Sendable {
+  case none
+  case error
+  case warning
+  case info
+  case debug
+  public static func < (lhs: GossipStack.GSKLogLevel, rhs: GossipStack.GSKLogLevel) -> Swift.Bool
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@frozen public enum GSKActionAuthStatus : Swift.String {
+  case authenticated
+  case guest
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum GSKAction {
+  case like
+  case dislike
+  case comment
+  case reply
+  public static func == (a: GossipStack.GSKAction, b: GossipStack.GSKAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol GSKAuthenticatedActionDelegate : AnyObject {
+  func gossipStack(_ sdk: GossipStack.GossipStackSDK, didPerformAction action: GossipStack.GSKAction, status: GossipStack.GSKActionAuthStatus)
+}
+public protocol GSKDelegate : AnyObject {
+  func gossipStack<T>(_ sdk: GossipStack.GossipStackSDK, didTapAvatarForUser user: T) where T : GossipStack.GSKUserable
+  func gossipStack(_ sdk: GossipStack.GossipStackSDK, didTapMention mention: GossipStack.GSKMention)
+  func gossipStack(_ sdk: GossipStack.GossipStackSDK, didTapHashtag hashtag: GossipStack.GSKHashtag)
+  func gossipStack(_ sdk: GossipStack.GossipStackSDK, didTapLink link: Swift.String)
+}
+extension GossipStack.GSKDelegate {
+  public func gossipStack<T>(_ sdk: GossipStack.GossipStackSDK, didTapAvatarForUser user: T) where T : GossipStack.GSKUserable
+  public func gossipStack(_ sdk: GossipStack.GossipStackSDK, didTapMention mention: GossipStack.GSKMention)
+  public func gossipStack(_ sdk: GossipStack.GossipStackSDK, didTapHashtag hashtag: GossipStack.GSKHashtag)
+}
+public protocol GSKHashtagSuggestionDelegate : AnyObject {
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) func gossipStack(_ sdk: GossipStack.GossipStackSDK, searchHashtagsFor query: Swift.String) async -> [GossipStack.GSKHashtag]
+  #endif
+}
+public protocol GSKMentionSuggestionDelegate : AnyObject {
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) func gossipStack(_ sdk: GossipStack.GossipStackSDK, searchMentionsFor query: Swift.String) async -> [GossipStack.GSKMention]
+  #endif
+}
+public protocol GSKUIToastDelegate : AnyObject {
+  func gossipStack(_ sdk: GossipStack.GossipStackSDK, didReceiveToastEvent event: GossipStack.GSKToastEvent)
+}
+@_Concurrency.MainActor @preconcurrency public struct GSKEchoPreview : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(appId: Swift.String, pageId: Swift.String, template: GossipStack.GSKEchoUITemplate = .threaded, displayAsPreviewCarousel: Swift.Bool = false, numberOfPreviewComments: Swift.Int = 2, openEchoView: ((_ commentId: Swift.Int?, _ parentId: Swift.Int?) -> Swift.Void)?, onEchoComposeComment: (() -> Swift.Void)?)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11GossipStack14GSKEchoPreviewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor @preconcurrency public struct GSKEchoView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(appId: Swift.String, pageId: Swift.String, canonicalURL: Swift.String, isPresented: SwiftUICore.Binding<Swift.Bool>, presentFullScreen: Swift.Bool = false, openTextEditor: Swift.Bool = false, template: GossipStack.GSKEchoUITemplate = .threaded, selectedComment: GossipStack.GSKCommentIdentifiers? = nil, onSheetCloseTap: (() -> Swift.Void)?)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11GossipStack11GSKEchoViewV4bodyQrvp", 0) __
+}
+public protocol GSKHashtagable : Swift.Identifiable, Swift.Sendable {
+  var id: Foundation.UUID { get }
+  var name: Swift.String { get }
+}
+public protocol GSKMentionable : Swift.Identifiable, Swift.Sendable {
+  var id: Swift.Int { get }
+  var name: Swift.String { get }
+  var handle: Swift.String { get }
+  var avatarURL: Swift.String? { get }
+}
+public protocol GSKUserable : Swift.Identifiable, Swift.Sendable {
+  var id: Swift.Int { get }
+  var username: Swift.String { get }
+  var handle: Swift.String? { get }
+  var avatarURL: Swift.String? { get }
+}
+public struct GSKCommentIdentifiers {
+  public let commentId: Swift.Int?
+  public let parentId: Swift.Int?
+  public init(commentId: Swift.Int?, parentId: Swift.Int?)
+}
+public struct GSKHashtag : GossipStack.GSKHashtagable {
+  public var id: Foundation.UUID
+  public let name: Swift.String
+  public init(id: Foundation.UUID = UUID(), name: Swift.String)
+  public typealias ID = Foundation.UUID
+}
+public struct GSKMention : GossipStack.GSKMentionable {
+  public let id: Swift.Int
+  public let name: Swift.String
+  public let handle: Swift.String
+  public let avatarURL: Swift.String?
+  public init(id: Swift.Int, name: Swift.String, handle: Swift.String, avatarURL: Swift.String?)
+  public typealias ID = Swift.Int
+}
+public struct GSKToastEvent : Swift.Identifiable {
+  public let id: Foundation.UUID
+  public let severity: GossipStack.GSKToastEventSeverity
+  public let type: GossipStack.GSKToastEventType
+  public let message: Swift.String
+  public let duration: Foundation.TimeInterval
+  public typealias ID = Foundation.UUID
+}
+public enum GSKToastEventSeverity : Swift.Sendable {
+  case info
+  case warning
+  case error
+  case success
+  public static func == (a: GossipStack.GSKToastEventSeverity, b: GossipStack.GSKToastEventSeverity) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum GSKToastEventType : Swift.String {
+  case genericUnexpectedError
+  case commentReportSuccess
+  case commentCreateSuccess
+  case commentReplyCreateSuccess
+  case commentUpdateSuccess
+  case commentDeleteSuccess
+  case commentPermalinkSuccess
+  case commentModerationSuccess
+  case commentRepliesFetchSuccess
+  case commentReportError
+  case commentCreateError
+  case commentReplyCreateError
+  case commentUpdateError
+  case commentDeleteError
+  case commentPermalinkError
+  case commentRepliesFetchError
+  case commentsFetchError
+  case commentUserActionError
+  case threadReportSuccess
+  case threadCreateSuccess
+  case threadReplyCreateSuccess
+  case threadUpdateSuccess
+  case threadDeleteSuccess
+  case threadPermalinkSuccess
+  case threadRepliesFetchSuccess
+  case threadReportError
+  case threadCreateError
+  case threadReplyCreateError
+  case threadUpdateError
+  case threadDeleteError
+  case threadPermalinkError
+  case threadRepliesFetchError
+  case threadsFetchError
+  case threadFetchError
+  case threadUserActionError
+  public var isSuccess: Swift.Bool {
+    get
+  }
+  public var isError: Swift.Bool {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct GSKActionButtonTheme {
+  public var buttonColor: SwiftUICore.Color
+  public var activeButtonColor: SwiftUICore.Color
+  public init(buttonColor: SwiftUICore.Color = GSKThemeColor.color("gsActionButton"), activeButtonColor: SwiftUICore.Color = GSKThemeColor.color("gsActionLikeDislikeActive"))
+}
+public struct GSKBottomSheetTheme {
+  public var backgroundColor: SwiftUICore.Color
+  public var actionTextColor: SwiftUICore.Color
+  public var destructiveActionTextColor: SwiftUICore.Color
+  public init(backgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsBottomSheetBackground"), actionTextColor: SwiftUICore.Color = GSKThemeColor.color("gsBottomSheetActionText"), destructiveActionTextColor: SwiftUICore.Color = GSKThemeColor.color("gsBottomSheetDestructiveText"))
+}
+public struct GSKChronicleViewTheme {
+  public var backgroundColor: SwiftUICore.Color
+  public init(backgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsEchoBackground"))
+}
+public struct GSKContentViewTheme {
+  public var usernameTextColor: SwiftUICore.Color
+  public var postDateTextColor: SwiftUICore.Color
+  public var editedBadgeTextColor: SwiftUICore.Color
+  public var contentTextColor: SwiftUICore.Color
+  public var expandOrCollapseContentText: SwiftUICore.Color
+  public var mentionColor: SwiftUICore.Color
+  public var linkColor: SwiftUICore.Color
+  public var hashtagColor: SwiftUICore.Color
+  public var backgroundColor: SwiftUICore.Color
+  public var pinnedTextColor: SwiftUICore.Color
+  public var pinnedBackgroundColor: SwiftUICore.Color
+  public var gutterLineColor: SwiftUICore.Color
+  public var seeRepliesButtonBackgroundColor: SwiftUICore.Color
+  public var seeRepliesButtonTextColor: SwiftUICore.Color
+  public var chroniclePollBgColor: SwiftUICore.Color
+  public var chroniclePollProgressColor: SwiftUICore.Color
+  public init(usernameTextColor: SwiftUICore.Color = GSKThemeColor.color("gsObjectUsername"), postDateTextColor: SwiftUICore.Color = GSKThemeColor.color("gsObjectPostDate"), editedBadgeTextColor: SwiftUICore.Color = GSKThemeColor.color("gsObjectEditedBadge"), contentTextColor: SwiftUICore.Color = GSKThemeColor.color("gsContentText"), expandOrCollapseContentText: SwiftUICore.Color = GSKThemeColor.color("gsExpandOrCollapseContentText"), mentionColor: SwiftUICore.Color = GSKThemeColor.color("gsContentMention"), hashtagColor: SwiftUICore.Color = GSKThemeColor.color("gsContentHashtag"), linkColor: SwiftUICore.Color = GSKThemeColor.color("gsContentLink"), backgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsObjectBackground"), pinnedTextColor: SwiftUICore.Color = GSKThemeColor.color("gsObjectPinnedText"), pinnedBackgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsObjectPinnedBackground"), gutterLineColor: SwiftUICore.Color = GSKThemeColor.color("gsObjectGutterLine"), seeRepliesButtonBackgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsCommentSeeRepliesBackground"), seeRepliesButtonTextColor: SwiftUICore.Color = GSKThemeColor.color("gsCommentSeeRepliesText"), chroniclePollBgColor: SwiftUICore.Color = GSKThemeColor.color("gsPollBgBar"), chroniclePollProgressColor: SwiftUICore.Color = GSKThemeColor.color("gsPollProgressBar"))
+}
+public struct GSKEchoLoadMoreContentButtonTheme {
+  public var backgroundColor: SwiftUICore.Color
+  public var textColor: SwiftUICore.Color
+  public init(backgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsEchoLoadMoreContentButtonBackground"), textColor: SwiftUICore.Color = GSKThemeColor.color("gsEchoLoadMoreContentButtonTextColor"))
+}
+public struct GSKEchoViewTheme {
+  public var backgroundColor: SwiftUICore.Color
+  public var newCommentHighlightColor: SwiftUICore.Color
+  public var loadMoreContentButtonTheme: GossipStack.GSKEchoLoadMoreContentButtonTheme
+  public var previewBackground: SwiftUICore.Color
+  public var previewSkimmerColor: SwiftUICore.Color
+  public var navigationBarTextColor: SwiftUICore.Color
+  public var navigationBarSortFilterColor: SwiftUICore.Color
+  public var navigationBarActiveSortBadge: SwiftUICore.Color
+  public var navigationBarInactiveSortBadge: SwiftUICore.Color
+  public var navigationBarActiveTextBadge: SwiftUICore.Color
+  public var navigationBarInactiveTextBadge: SwiftUICore.Color
+  public init(backgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsEchoBackground"), newCommentHighlightColor: SwiftUICore.Color = GSKThemeColor.color("gsEchoNewCommentHighlightColor"), loadMoreContentButtonTheme: GossipStack.GSKEchoLoadMoreContentButtonTheme = GSKEchoLoadMoreContentButtonTheme(), previewSkimmerColor: SwiftUICore.Color = GSKThemeColor.color("gsEchoPreviewSkimmer"), previewBackground: SwiftUICore.Color = GSKThemeColor.color("gsEchoPreviewBackground"), navigationBarTextColor: SwiftUICore.Color = GSKThemeColor.color("gsEchoNavBarText"), navigationBarSortFilterColor: SwiftUICore.Color = GSKThemeColor.color("gsEchoNavBarSortFilter"), navigationBarActiveSortBadge: SwiftUICore.Color = GSKThemeColor.color("gsEchoNavBarActiveSortBadge"), navigationBarActiveTextBadge: SwiftUICore.Color = GSKThemeColor.color("gsEchoNavBarTextActiveBadge"), navigationBarInactiveSortBadge: SwiftUICore.Color = GSKThemeColor.color("gsEchoNavBarInactiveSortBadge"), navigationBarInactiveTextBadge: SwiftUICore.Color = GSKThemeColor.color("gsEchoNavBarTextInactiveBadge"))
+}
+public struct GSKTextEditorViewTheme {
+  public var backgroundColor: SwiftUICore.Color
+  public var placeholderColor: SwiftUICore.Color
+  public var toolbarBackgroundColor: SwiftUICore.Color
+  public var toolbarActionButtonColor: SwiftUICore.Color
+  public var toolbarSubmitButtonColor: SwiftUICore.Color
+  public init(backgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsEditorBackground"), placeholderColor: SwiftUICore.Color = GSKThemeColor.color("gsEditorPlaceholder"), toolbarBackgroundColor: SwiftUICore.Color = GSKThemeColor.color("gsEditorToolbarBackground"), toolbarActionButtonColor: SwiftUICore.Color = GSKThemeColor.color("gsEditorToolbarAction"), toolbarSubmitButtonColor: SwiftUICore.Color = GSKThemeColor.color("gsEditorToolbarSubmit"))
+}
+public struct GSKTheme {
+  public var toast: GossipStack.GSKToastViewTheme
+  public var echo: GossipStack.GSKEchoViewTheme
+  public var chronicle: GossipStack.GSKChronicleViewTheme
+  public var textEditor: GossipStack.GSKTextEditorViewTheme
+  public var actionButtons: GossipStack.GSKActionButtonTheme
+  public var bottomSheet: GossipStack.GSKBottomSheetTheme
+  public var content: GossipStack.GSKContentViewTheme
+  public init(toast: GossipStack.GSKToastViewTheme = GSKToastViewTheme(), echo: GossipStack.GSKEchoViewTheme = GSKEchoViewTheme(), chronicle: GossipStack.GSKChronicleViewTheme = GSKChronicleViewTheme(), textEditor: GossipStack.GSKTextEditorViewTheme = GSKTextEditorViewTheme(), actionButtons: GossipStack.GSKActionButtonTheme = GSKActionButtonTheme(), bottomSheet: GossipStack.GSKBottomSheetTheme = GSKBottomSheetTheme(), content: GossipStack.GSKContentViewTheme = GSKContentViewTheme())
+}
+public enum GSKThemeColor {
+  public static func color(_ name: Swift.String) -> SwiftUICore.Color
+}
+public struct GSKToastViewTheme {
+  public var successBackground: SwiftUICore.Color
+  public var errorBackground: SwiftUICore.Color
+  public var infoBackground: SwiftUICore.Color
+  public var warningBackground: SwiftUICore.Color
+  public var successTextColor: SwiftUICore.Color
+  public var errorTextColor: SwiftUICore.Color
+  public var infoTextColor: SwiftUICore.Color
+  public var warningTextColor: SwiftUICore.Color
+  public var successIconColor: SwiftUICore.Color
+  public var errorIconColor: SwiftUICore.Color
+  public var infoIconColor: SwiftUICore.Color
+  public var warningIconColor: SwiftUICore.Color
+  public init(successBackground: SwiftUICore.Color = GSKThemeColor.color("gsToastSuccessBackground"), errorBackground: SwiftUICore.Color = GSKThemeColor.color("gsToastErrorBackground"), infoBackground: SwiftUICore.Color = GSKThemeColor.color("gsToastInfoBackground"), warningBackground: SwiftUICore.Color = GSKThemeColor.color("gsToastWarningBackground"), successTextColor: SwiftUICore.Color = GSKThemeColor.color("gsToastSuccessText"), errorTextColor: SwiftUICore.Color = GSKThemeColor.color("gsToastErrorText"), infoTextColor: SwiftUICore.Color = GSKThemeColor.color("gsToastInfoText"), warningTextColor: SwiftUICore.Color = GSKThemeColor.color("gsToastWarningText"), successIconColor: SwiftUICore.Color = GSKThemeColor.color("gsToastSuccessIcon"), errorIconColor: SwiftUICore.Color = GSKThemeColor.color("gsToastErrorIcon"), infoIconColor: SwiftUICore.Color = GSKThemeColor.color("gsToastInfoIcon"), warningIconColor: SwiftUICore.Color = GSKThemeColor.color("gsToastWarningIcon"))
+}
+public enum GSKEchoUITemplate {
+  case threaded
+  case stacked
+  public static func == (a: GossipStack.GSKEchoUITemplate, b: GossipStack.GSKEchoUITemplate) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum GSKEchoPreviewUITemplate {
+  case threaded
+  case stacked
+  public static func == (a: GossipStack.GSKEchoPreviewUITemplate, b: GossipStack.GSKEchoPreviewUITemplate) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum GSKChronicleUITemplate {
+  case timeline
+  case timelineCompact
+  case feed
+  public static func == (a: GossipStack.GSKChronicleUITemplate, b: GossipStack.GSKChronicleUITemplate) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class GossipStackSDK {
+  public static var shared: GossipStack.GossipStackSDK {
+    get
+  }
+  public static var version: Swift.String {
+    get
+  }
+  weak final public var delegate: (any GossipStack.GSKDelegate)?
+  weak final public var authenticatedActionDelegate: (any GossipStack.GSKAuthenticatedActionDelegate)?
+  weak final public var toastEventDelegate: (any GossipStack.GSKUIToastDelegate)?
+  weak final public var mentionSuggestionDelegate: (any GossipStack.GSKMentionSuggestionDelegate)?
+  weak final public var hashtagSuggestionDelegate: (any GossipStack.GSKHashtagSuggestionDelegate)?
+  public static func initialize(configuration: GossipStack.GSKConfiguration, theme: GossipStack.GSKTheme = .init())
+  public static func reset()
+  @objc deinit
+}
+extension GossipStack.GSKLogLevel : Swift.Hashable {}
+extension GossipStack.GSKLogLevel : Swift.RawRepresentable {}
+extension GossipStack.GSKActionAuthStatus : Swift.Equatable {}
+extension GossipStack.GSKActionAuthStatus : Swift.Hashable {}
+extension GossipStack.GSKActionAuthStatus : Swift.RawRepresentable {}
+extension GossipStack.GSKActionAuthStatus : Swift.Sendable {}
+extension GossipStack.GSKActionAuthStatus : Swift.BitwiseCopyable {}
+extension GossipStack.GSKAction : Swift.Equatable {}
+extension GossipStack.GSKAction : Swift.Hashable {}
+extension GossipStack.GSKEchoPreview : Swift.Sendable {}
+extension GossipStack.GSKEchoView : Swift.Sendable {}
+extension GossipStack.GSKToastEventSeverity : Swift.Equatable {}
+extension GossipStack.GSKToastEventSeverity : Swift.Hashable {}
+extension GossipStack.GSKToastEventType : Swift.Equatable {}
+extension GossipStack.GSKToastEventType : Swift.Hashable {}
+extension GossipStack.GSKToastEventType : Swift.RawRepresentable {}
+extension GossipStack.GSKEchoUITemplate : Swift.Equatable {}
+extension GossipStack.GSKEchoUITemplate : Swift.Hashable {}
+extension GossipStack.GSKEchoPreviewUITemplate : Swift.Equatable {}
+extension GossipStack.GSKEchoPreviewUITemplate : Swift.Hashable {}
+extension GossipStack.GSKChronicleUITemplate : Swift.Equatable {}
+extension GossipStack.GSKChronicleUITemplate : Swift.Hashable {}

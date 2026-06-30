@@ -1,0 +1,28 @@
+Copyright (c) 2026 Honmono Studio SAS. All rights reserved.
+
+PROPRIETARY LICENSE
+
+This binary SDK is the proprietary information of Honmono Studio SAS
+("Company"), provided as part of its GossipStack product.
+It is provided solely for integration into your applications subject 
+to the GossipStack Terms of Service 
+(https://gossipstack.com/terms) and an active GossipStack subscription.
+
+You MAY:
+- Use this SDK in your applications in accordance with the Terms of Service.
+
+You MAY NOT:
+- Redistribute, sublicense, or make this SDK available to third parties
+  outside of your own applications.
+- Reverse engineer, decompile, disassemble, or otherwise attempt to derive
+  the source code of this SDK.
+- Modify, adapt, or create derivative works based on this SDK.
+- Remove or alter any proprietary notices, labels, or marks.
+
+THIS SDK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
+HONMONO STUDIO SAS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY
+ARISING FROM THE USE OF THIS SDK.
+
+For licensing inquiries: support@gossipstack.com
