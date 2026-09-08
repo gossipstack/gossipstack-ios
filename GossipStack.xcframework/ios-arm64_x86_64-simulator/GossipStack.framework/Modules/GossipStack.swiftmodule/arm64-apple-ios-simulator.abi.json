@@ -3975,6 +3975,13 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "GossipStack"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -5030,6 +5037,70 @@
       },
       {
         "kind": "Import",
+        "name": "LinkPresentation",
+        "printedName": "LinkPresentation",
+        "declKind": "Import",
+        "moduleName": "GossipStack"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "LinkPresentation",
+        "printedName": "LinkPresentation",
+        "declKind": "Import",
+        "moduleName": "GossipStack"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -5215,6 +5286,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -5231,6 +5312,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "GossipStack",
         "declAttributes": [
@@ -5438,6 +5529,16 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "GossipStack"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -8238,6 +8339,40 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GossipStack",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "GossipStack"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "GossipStack"
       },
       {
         "kind": "Import",
@@ -15998,6 +16133,13 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Core\/GSKInternalNotificationService.swift",
+      "kind": "FloatLiteral",
+      "offset": 10661,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Core\/GSKLogger.swift",
       "kind": "StringLiteral",
       "offset": 1616,
@@ -16051,7 +16193,7 @@
       "kind": "StringLiteral",
       "offset": 1030,
       "length": 7,
-      "value": "\"1.0.0\""
+      "value": "\"1.1.0\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Features\/EchoPreview\/ViewModel\/EchoPreviewViewModel.swift",
@@ -16218,6 +16360,13 @@
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Features\/EchoView\/Repository\/EchoCommentDataRepository.swift",
       "kind": "BooleanLiteral",
       "offset": 1342,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Features\/EchoView\/Repository\/EchoRepository.swift",
+      "kind": "BooleanLiteral",
+      "offset": 13541,
       "length": 5,
       "value": "false"
     },
@@ -16607,79 +16756,86 @@
       "value": "\"https:\/\/xsgames.co\/randomusers\/avatar.php?g=male\""
     },
     {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/Comment.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7098,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 2911,
+      "offset": 2926,
       "length": 15,
       "value": "\"new_line_text\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 2994,
+      "offset": 3009,
       "length": 11,
       "value": "\"bold_text\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 3028,
+      "offset": 3043,
       "length": 13,
       "value": "\"italic_text\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 3067,
+      "offset": 3082,
       "length": 16,
       "value": "\"underline_text\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 3113,
+      "offset": 3128,
       "length": 20,
       "value": "\"strikethrough_text\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 3264,
+      "offset": 3279,
       "length": 13,
       "value": "\"line_return\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 3734,
+      "offset": 3749,
       "length": 9,
       "value": "\"node_id\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 3792,
+      "offset": 3807,
       "length": 19,
       "value": "\"next_line_node_id\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "StringLiteral",
-      "offset": 3842,
+      "offset": 3857,
       "length": 17,
       "value": "\"end_blockquotes\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "Array",
-      "offset": 4196,
+      "offset": 4297,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Models\/ContentData.swift",
       "kind": "Array",
-      "offset": 4512,
+      "offset": 4835,
       "length": 2,
       "value": "[]"
     },
@@ -16936,6 +17092,167 @@
       "value": "1024"
     },
     {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 847,
+      "length": 52,
+      "value": "\"\\.(png|jpe?g|gif|webp|svg|avif|bmp|tiff?)(\\?.*)?\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1046,
+      "length": 9,
+      "value": "\"YouTube\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1129,
+      "length": 74,
+      "value": "\"(?:youtube\\.com\/(?:watch\\?.*v=|shorts\/)|youtu\\.be\/)([a-zA-Z0-9_-]{11})\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1244,
+      "length": 65,
+      "value": "\"https:\/\/www.youtube.com\/oembed?url=\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1296,
+      "length": 1,
+      "value": "\"&format=json\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1366,
+      "length": 7,
+      "value": "\"Vimeo\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1430,
+      "length": 20,
+      "value": "\"vimeo\\.com\/(\\d+)\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1478,
+      "length": 56,
+      "value": "\"https:\/\/vimeo.com\/api\/oembed.json?url=\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1533,
+      "length": 3,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1591,
+      "length": 13,
+      "value": "\"Dailymotion\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1661,
+      "length": 41,
+      "value": "\"dailymotion\\.com\/video\/([a-zA-Z0-9]+)\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1730,
+      "length": 78,
+      "value": "\"https:\/\/www.dailymotion.com\/services\/oembed?url=\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1795,
+      "length": 1,
+      "value": "\"&format=json\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1865,
+      "length": 8,
+      "value": "\"TikTok\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1930,
+      "length": 35,
+      "value": "\"tiktok\\.com\/@[\\w.]+\/video\/(\\d+)\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 1993,
+      "length": 52,
+      "value": "\"https:\/\/www.tiktok.com\/oembed?url=\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSLinkClassifier.swift",
+      "kind": "StringLiteral",
+      "offset": 2044,
+      "length": 3,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSOGMetadataFetcher.swift",
+      "kind": "IntegerLiteral",
+      "offset": 882,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/GSOGMetadataFetcher.swift",
+      "kind": "IntegerLiteral",
+      "offset": 928,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/OGModels.swift",
+      "kind": "StringLiteral",
+      "offset": 2109,
+      "length": 11,
+      "value": "\"image_alt\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/OGModels.swift",
+      "kind": "StringLiteral",
+      "offset": 2152,
+      "length": 11,
+      "value": "\"site_name\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/OGModels.swift",
+      "kind": "StringLiteral",
+      "offset": 2195,
+      "length": 9,
+      "value": "\"og_type\""
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/OGMetadata\/OGModels.swift",
+      "kind": "StringLiteral",
+      "offset": 2236,
+      "length": 15,
+      "value": "\"canonical_url\""
+    },
+    {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/Services\/DateFormatterService.swift",
       "kind": "IntegerLiteral",
       "offset": 1828,
@@ -17088,6 +17405,13 @@
       "offset": 4429,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/Extensions\/URL+Default.swift",
+      "kind": "StringLiteral",
+      "offset": 734,
+      "length": 13,
+      "value": "\"about:blank\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/ImagePreviewView\/ImagePreviewCarousel.swift",
@@ -17454,6 +17778,13 @@
       "value": "80"
     },
     {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/RichTextEditor\/ComposerMediaItemView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 957,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/RichTextEditor\/ComposerOverlayView.swift",
       "kind": "BooleanLiteral",
       "offset": 1320,
@@ -17512,35 +17843,35 @@
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/RichTextEditor\/ComposerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3587,
+      "offset": 3695,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/RichTextEditor\/ComposerViewModel.swift",
       "kind": "Array",
-      "offset": 3697,
+      "offset": 3805,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/RichTextEditor\/ComposerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3907,
+      "offset": 4015,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/RichTextEditor\/ComposerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5026,
+      "offset": 5345,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/RichTextEditor\/ComposerViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5217,
+      "offset": 5536,
       "length": 2,
       "value": "\"\""
     },
@@ -18126,6 +18457,13 @@
       "value": "1.0"
     },
     {
+      "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/GIFView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 778,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/SharedUI\/ImageGalleryFullScreenView.swift",
       "kind": "IntegerLiteral",
       "offset": 958,
@@ -18248,8 +18586,8 @@
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/UIThemes\/Colors\/GSKActionButtonTheme.swift",
       "kind": "StringLiteral",
       "offset": 2184,
-      "length": 27,
-      "value": "\"gsActionLikeDislikeActive\""
+      "length": 22,
+      "value": "\"gsActionButtonActive\""
     },
     {
       "filePath": "\/Users\/nicolas\/Documents\/git\/featurable-ios-sdk\/GossipStacksSDK\/GossipStack\/UIThemes\/Colors\/GSKBottomSheetTheme.swift",
