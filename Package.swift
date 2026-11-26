@@ -12,8 +12,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "GossipStack",
-            url: "https://github.com/gossipstack/gossipstack-ios/releases/download/1.1.0/GossipStack.xcframework.zip",
-            checksum: "b3d314d0b926d5b4e6135ba9cac3c09e4c71ac19df2771069ad04eb58ad8cf2f"
+            url: "https://github.com/gossipstack/gossipstack-ios/releases/download/2.0.0/GossipStack.xcframework.zip",
+            checksum: "a1ab27de494784f35825e1b29ccbaf369c24f24c367d0286eca42bde60c6d737"
         ),
     ]
 )

@@ -2,7 +2,7 @@
 
 The official iOS SDK for [GossipStack](https://gossipstack.com) — Drop-in social feature SDKs for web and mobile applications.
 
-GossipStack provides ready-to-use commenting [Echo](https://gossipstack.com/products/echo) SDK, backed by a centralized dashboard for content moderation, engagement analytics, webhook integrations, and role-based team management.
+GossipStack provides ready-to-use commenting [Echo](https://gossipstack.com/products/echo) and social feed [Chronicle](https://gossipstack.com/products/chronicle) SDKs, backed by a centralized dashboard for content moderation, engagement analytics, webhook integrations, and role-based team management.
 
 ## Prerequisites
 
@@ -56,13 +56,14 @@ import GossipStack
 
 struct ContentView: View {
 
-	@State private var isEchoViewPresented = true
+    @State private var isEchoViewPresented = true
 
 
     var body: some View {
         GSKEchoView(
             appId: "__YOUR_APP_ID__",
             pageId: "__YOUR_PAGE_ID__",
+            postId: 1234,  // Optional associated Chronicle post ID
             canonicalURL: "https://yourdomain.com/posts/your-web-link-to-post-id-123",
             isPresented: $isEchoViewPresented,
             presentFullScreen: true,
@@ -74,15 +75,51 @@ struct ContentView: View {
 
 Replace `__YOUR_APP_ID__` and `__YOUR_PAGE_ID__` with the values from your [GossipStack dashboard](https://dashboard.gossipstack.com).
 
-The `canonicalURL` parameter ties this comment section to a specific page on your website, enabling cross-platform comment sync between your web and mobile apps. See the [Canonical URL documentation](https://docs.gossipstack.com/echo-installation-ios#canonical-url) for more details.
+The `canonicalURL` parameter ties this comment section to a specific page on your website, enabling cross-platform comment sync between your web and mobile apps. See the [Canonical URL documentation](https://docs.gossipstack.com/echo-chronicle-installation-ios#canonical-url) for more details.
+
+## 🚀 Quick Start — Chronicle (Social Feed)
+
+`GSKChronicleView` is the drop-in social feed component from the **Chronicle** product. Embed it inside a `NavigationStack` to give users a scrollable feed where they can browse, create, and interact with posts.
+
+A `GSKChronicleController` (owned by the parent view via `@StateObject`) drives programmatic actions on the feed — presenting the post composer, switching the data source, or changing the sort order.
+
+```swift
+import SwiftUI
+import GossipStack
+
+struct FeedView: View {
+
+    @StateObject private var controller = GSKChronicleController()
+    @State private var navigationPath = NavigationPath()
+
+    var body: some View {
+        NavigationStack(path: $navigationPath) {
+            GSKChronicleView(
+                appId: "__YOUR_APP_ID__",
+                canonicalURL: "https://yourdomain.com/feed",  // Go to Canonical URL documentation
+                controller: self.controller
+            )
+            .onThreadSelected { postId in
+                // Navigate to the post detail view
+            }
+            .onAvatarTapped { user in
+                // Navigate to the user's profile
+            }
+        }
+    }
+}
+```
+
+Replace `__YOUR_APP_ID__` with the value from your [GossipStack dashboard](https://dashboard.gossipstack.com).
+
+The `canonicalURL` parameter ties this feed to a specific page on your website, enabling cross-platform sync between your web and mobile apps.
 
 ## Documentation
 
 For the full iOS integration guide, theming, localization, and advanced configuration, visit the official documentation:
 
-**[Echo iOS SDK Documentation →](https://docs.gossipstack.com/echo-installation-ios)**
+**[Echo and Chronicle iOS SDK Documentation →](https://docs.gossipstack.com/echo-chronicle-installation-ios)**
 
 ## License
 
 Use of this software is governed by the GossipStack Terms of Service available at [license terms](https://gossipstack.com/terms).
-
